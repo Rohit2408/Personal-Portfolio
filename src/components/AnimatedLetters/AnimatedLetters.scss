@@ -1,0 +1,63 @@
+/* Define keyframes */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scaleX(1.25) scaleY(0.75);
+  }
+  40% {
+    transform: scaleX(0.75) scaleY(1.25);
+  }
+  50% {
+    transform: scaleX(1.15) scaleY(0.85);
+  }
+  65% {
+    transform: scaleX(0.95) scaleY(1.05);
+  }
+  75% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s forwards;
+  animation-delay: 1s;
+  min-width: 10px;
+}
+
+.text-animate-hover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: #02d866;
+  }
+}
+
+@for $i from 1 through 36 {
+  .text-animate._#{$i} {
+    animation-delay: #{($i / 10)}s;
+  }
+}
