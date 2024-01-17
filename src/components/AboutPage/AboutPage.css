@@ -179,7 +179,7 @@ img {
    padding-top: 20px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 480px) {
     .about {
         animation-name: slideInUp;
         animation-delay: 0s;
@@ -259,7 +259,7 @@ img {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width: 800px) {
+@media screen and (min-width: 480px) and (max-width: 1024px) {
     .about {
         animation-name: slideInUp;
         animation-delay: 0s;

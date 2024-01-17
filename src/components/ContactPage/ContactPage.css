@@ -104,7 +104,7 @@
   color: black;
 }
 
-@media screen and (max-width: 600px)  {
+@media screen and (max-width: 480px)  {
 
   .content h1 {
     font-size: 1em;
@@ -129,7 +129,7 @@
   }
 }
 
-@media screen and (min-width: 600px) and (max-width:800px)  {
+@media screen and (min-width: 480px) and (max-width:1024px)  {
 
   .content h1 {
     font-size: 1em;

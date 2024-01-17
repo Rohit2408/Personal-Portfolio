@@ -157,7 +157,7 @@ body {
     }
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 480px) {
     .home-page {
       .text-zone {
         margin-top: -80px;
