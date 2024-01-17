@@ -5,7 +5,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+<<<<<<< HEAD
     "predeploy": "npm run build",
+=======
+    "predeploy":"npm run build",
+>>>>>>> e2ccf4d31bf8d1d10005720e59ecf67b69d2693f
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
@@ -45,9 +49,13 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "sass": "^1.69.7",
     "vite": "^5.0.8"
+<<<<<<< HEAD
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "vite.config.js",
   "author": "",
   "license": "ISC"
+=======
+  }
+>>>>>>> e2ccf4d31bf8d1d10005720e59ecf67b69d2693f
 }

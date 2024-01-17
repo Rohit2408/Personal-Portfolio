@@ -33,7 +33,11 @@ function CardComponent() {
                     component="img"
                     alt="myWeather"
                     height="140"
+<<<<<<< HEAD
                     image="https://tutorialzine.com/media/2012/05/jquery-geolocation-weather-app.jpg" 
+=======
+                    image="https://drive.google.com/file/d/1ZE0OrFWr8yPHRtbZDwZNhGTd6JWXGiti/view?usp=sharing" 
+>>>>>>> e2ccf4d31bf8d1d10005720e59ecf67b69d2693f
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
