@@ -116,7 +116,7 @@ img {
 
 .about-card {
     height: 150px;
-    position: relative;
+    position: absolute;
     background-image: linear-gradient(to left, #02d866, black);
     display: flex;
     background-color: #02d866;
@@ -168,6 +168,7 @@ img {
     animation-duration: 2s;
     animation-delay: 0s;
     margin-left: -5px;
+    margin-top: 200px;
 }
   
 .card-row {
