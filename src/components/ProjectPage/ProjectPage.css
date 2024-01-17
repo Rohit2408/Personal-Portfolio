@@ -1,0 +1,27 @@
+.project {
+    .heading {
+       align-items: center;
+       justify-content: center;
+       font-size: 30px; 
+       font-weight: normal;
+       text-decoration: none;
+       animation: fadeIn;
+       animation-delay: 0s;
+       animation-duration: 1s;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .project {
+        animation-name: slideInUp;
+        animation-delay: 0s;
+        animation-duration: 2s;
+        z-index: 9999;
+    }    
+
+    h1 {
+        font-size: 40px;
+        margin-top: 30px;
+    }
+}

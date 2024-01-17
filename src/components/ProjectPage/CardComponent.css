@@ -1,0 +1,60 @@
+.cards {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   margin-top: 50px; 
+   animation-name: slideInUp;
+   animation-duration: 2s;
+   animation-delay: 0s;
+ }
+
+.cards .MuiCard-root {
+  max-width: 600px;
+}
+
+.cards .MuiCardMedia-root {
+  width: 450px; 
+  height: 300px;
+}
+
+
+ img {
+   margin: 0;
+ }
+
+@media screen and (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cards > * {
+    max-width: 100%;
+  }
+
+  .cards .MuiCard-root {
+    width: 100%;
+  }
+
+  .cards .MuiCardMedia-root {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .cards {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .cards .MuiCard-root {
+    width: 100%;
+  }
+
+  .cards .MuiCardMedia-root {
+    width: 100%;
+    height: 300px;
+  }
+}

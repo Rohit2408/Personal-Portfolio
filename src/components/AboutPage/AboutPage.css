@@ -1,0 +1,307 @@
+u {
+    text-decoration: underline;
+    text-decoration-color: #02d866;
+}
+
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.heading1,
+.heading2,
+.about-card,
+.card-container {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+.story {
+    padding-bottom: 50px;
+}
+
+img {
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.about {
+    background-color: black;
+    line-height: 20px;
+}
+
+.about-content {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px; 
+}
+
+.heading {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: -30px;
+    padding-left: 10px;
+
+    img {
+        margin-top: -20px;
+    }
+}
+
+.body {
+    padding-left: 10px;
+}
+
+.heading1 {
+    padding-left: 20px;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.heading2 {
+    padding-left: 20px;
+    color: #02d866;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.about-text {
+    padding-left: -10px;
+    font-size: 35px;
+    line-height: normal;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+
+.about-card {
+    height: 150px;
+    position: absolute;
+    background-image: linear-gradient(to left, #02d866, black);
+    display: flex;
+    background-color: #02d866;
+    border-radius: 10px;
+    font-size: 20px;
+    animation-name: slideInRight;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    margin-left: -10px;
+}
+
+.about-card .card-body {
+    width: 600px;
+}
+
+.about-card .card-title {
+    margin-top: -40px;
+    margin-left: 15px;
+    padding-left: 10px;
+    padding-bottom: 0;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.about-card .card-text {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.partition-container {
+    display: flex;
+  }
+  
+  .partition-left {
+    width: 75%;
+    padding: 20px;
+  }
+  
+  .partition-right {
+    width: 50%;
+    padding: 0;
+    margin: -200px 0 10px;
+    max-width: 700px;
+  }
+
+.card-container {
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    margin-left: -5px;
+    margin-top: 200px;
+}
+  
+.card-row {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 10px; 
+   margin: -350px 0 0 30px;
+   padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        animation-name: slideInUp;
+        animation-delay: 0s;
+        animation-duration: 2s;
+    }
+
+    .heading1 {
+        padding-left: 20px;
+        animation-name: slideInLeft;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        margin-top: 100px;
+    }
+
+    .about-text {
+        padding-left: -10px;
+        margin-left: 15px;
+        font-size: 35px;
+        line-height: normal;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        font-size: 25px;
+    }
+
+    .partition-container {
+        flex-direction: column;
+    }
+
+    .partition-left{
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+        max-width: none;
+    }
+
+    .partition-right {
+        width: 100%;
+        padding: 10px;
+        margin-top: -45px;
+        max-width: none;
+    }
+
+    .card-container {
+        margin-top: 500px;   
+    }
+
+    .about-card {
+        height: 150px;
+        width: 325px;
+    }
+
+    .about-card .card-title {
+        font-size: 0.8em;
+        font-weight: bold;
+        line-height: 20px;
+        margin-top: 20px;
+    }
+
+    .about-card .card-text {
+        font-size: 0.8em;
+        margin-top: 50px;
+        margin-bottom: -25px;
+        line-height: 0.1em;
+    }
+
+    .heading {
+        margin-top: 30px;
+        padding-top: 10px;
+        display: flex;
+        img {
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 800px) {
+    .about {
+        animation-name: slideInUp;
+        animation-delay: 0s;
+        animation-duration: 2s;
+    }
+
+    .about-text {
+        padding-left: -10px;
+        margin-left: 15px;
+        font-size: 35px;
+        line-height: normal;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+        animation-delay: 0s;
+        font-size: 25px;
+    }
+    .about-card {
+        height: 150px;
+        width: 750px;
+        margin-top: 20px;
+    }
+
+    .partition-container {
+        flex-direction: column;
+    }
+
+    .partition-left {
+        width: 100%;
+        padding: 10px;
+
+        max-width: none;
+    }
+
+    .partition-right {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        max-width: none;
+    }
+
+    .card-container {
+        margin-top: 500px;
+    }
+}

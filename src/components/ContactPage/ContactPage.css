@@ -1,0 +1,155 @@
+@keyframes slideInUp {
+  0% {
+      transform: translateY(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+/* Set initial position */
+.contact-page {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    transition: bottom 0.3s ease-out;
+    animation-name: slideInUp;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    z-index: 9999;
+  }
+  
+  /* Show contact page */
+  .contact-page.show {
+    bottom: 0;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    font-size: 50px;
+    transition: transform 0.5s ease;
+    transform: translateY(-100%);
+  }
+  
+  .content.slide-down {
+    transform: translateY(0);
+    animation-duration: 1s;
+  }
+
+  .content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+.close-btn {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  font-size: 16px;
+  padding: 1px 30px;
+  background-color: transparent;
+  color: #02d866;
+  border: 2px solid #02d866;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.close-btn:hover {
+    background-color: #02d866;
+    color: black;
+}
+
+.contact-button {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-button button {
+  position: relative;
+  font-size: 30px;
+  padding: 20px 30px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.contact-button button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 600px)  {
+
+  .content h1 {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 0.5em;
+    margin-bottom: 20px;
+  }
+
+  .close-btn {
+    font-size: 14px;
+    padding: 1px 20px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .contact-button button {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width:800px)  {
+
+  .content h1 {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .content p {
+    font-size: 0.5em;
+    margin-bottom: 20px;
+  }
+
+  .close-btn {
+    font-size: 14px;
+    padding: 1px 20px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .contact-button button {
+    font-size: 20px;
+    padding: 15px 20px;
+  }
+}
