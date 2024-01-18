@@ -12,13 +12,26 @@ import CustomCursor from './components/CustomCursor/CustomCursor';
 
 function App() {
   const [loading, setLoading] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect (() => {
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 1000)
+    }, 1000);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
   }, [])
+
+  const isMobile = innerWidth < 768;
 
   return (
     <div className='App'>
@@ -45,7 +58,7 @@ function App() {
         </div>
       )}
       {!loading && <ParticleAnimation />}
-      <CustomCursor />
+      {!isMobile && <CustomCursor />}
     </div>
   );
 }

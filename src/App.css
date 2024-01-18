@@ -1,5 +1,5 @@
 * {
-  /* cursor: none; */
+  cursor: none;
 }
 
 .loader-container {
@@ -18,14 +18,14 @@
   border-radius: 50%;
 }
 
-@media screen and (max-width: 1024px) {
-  .custom-cursor {
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  CustomCursor {
     display: none;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .custom-cursor {
+  CustomCursor {
     display: none;
   }
 }
