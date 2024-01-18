@@ -219,6 +219,8 @@ img {
         padding: 0.625rem;
         margin-top: -2.813rem;
         max-width: none;
+        justify-content: center;
+        align-items: center;
     }
 
     .card-container {

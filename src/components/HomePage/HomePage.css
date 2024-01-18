@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .home-page {
     .text-zone {
       position: absolute;
@@ -154,7 +158,9 @@
   }
 
   @media screen and (max-width: 480px) {
-    
+    body {
+      overflow: auto;
+    }
 
     .home-page {
       .text-zone {
