@@ -211,8 +211,6 @@ img {
 
     .partition-left{
         width: 100%;
-        padding: 0.625rem;
-        margin: 0;
         max-width: none;
     }
 
@@ -228,6 +226,7 @@ img {
     }
 
     .about-card {
+        position: absolute;
         height: 9.375rem;
         width: 20.313rem;
     }
