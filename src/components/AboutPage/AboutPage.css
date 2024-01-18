@@ -242,7 +242,7 @@ img {
     .about-card {
         position: absolute;
         height: 9.375rem;
-        width: 90%;
+        width: 90vw;
     }
 
     .about-card .card-title {
@@ -272,7 +272,7 @@ img {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 480px) and (max-width: 1024px) {
     body {
         overflow: auto;
     }

@@ -205,7 +205,7 @@ body {
     }
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 480px) and (max-width: 1024px) {
     .home-page {
       .text-zone h1 {
         font-size: 50px;
