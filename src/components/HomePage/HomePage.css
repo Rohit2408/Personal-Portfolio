@@ -55,7 +55,7 @@ body {
 
   }
   
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     .tags,
     .home-page h1:before,
     .home-page h1:after {
@@ -202,6 +202,14 @@ body {
       padding-top: -60%;
       margin-top: -50%;
       margin-left: 0;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .home-page {
+      .text-zone h1 {
+        font-size: 50px;
+      }
     }
   }
 
