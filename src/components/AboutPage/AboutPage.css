@@ -215,13 +215,13 @@ img {
     }
 
     .partition-right {
-        width: 50%;
+        display: flex;
+        width: 100%;
         padding: 0.625rem;
         margin-top: -2.813rem;
-        padding-left: 2.188rem;
-        max-width: none;
         justify-content: center;
         align-items: center;
+        margin-left: 7.5rem;
     }
 
     .card-container {
