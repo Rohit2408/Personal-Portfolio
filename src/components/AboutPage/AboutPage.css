@@ -215,17 +215,13 @@ img {
     }
 
     .partition-right {
-        width: 100%;
+        width: 50%;
         padding: 0.625rem;
         margin-top: -2.813rem;
+        padding-left: 2.188rem;
         max-width: none;
         justify-content: center;
         align-items: center;
-    }
-
-    TextSphere {
-        align-items: center;
-        justify-content: center;
     }
 
     .card-container {
