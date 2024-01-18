@@ -55,39 +55,39 @@ u {
 }
 
 .story {
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
 }
 
 img {
-    margin-left: 60px;
-    margin-top: 20px;
+    margin-left: 3.75rem;
+    margin-top: 1.25rem;
 }
 
 .about {
     background-color: black;
-    line-height: 20px;
+    line-height: 1.25rem;
 }
 
 .about-content {
     display: flex;
-    padding-left: 30px;
-    padding-right: 30px; 
+    padding-left: 1.875rem;
+    padding-right: 1.875rem; 
 }
 
 .heading {
     color: white;
     display: flex;
     align-items: center;
-    margin-bottom: -30px;
-    padding-left: 10px;
+    margin-bottom: -1.875rem;
+    padding-left: 0.625rem;
 
     img {
-        margin-top: -20px;
+        margin-top: -1.25rem;
     }
 }
 
 .body {
-    padding-left: 10px;
+    padding-left: 0.625rem;
 }
 
 .heading1 {
@@ -98,7 +98,7 @@ img {
 }
 
 .heading2 {
-    padding-left: 20px;
+    padding-left: 1.25rem;
     color: #02d866;
     animation-name: slideInLeft;
     animation-duration: 1s;
@@ -106,8 +106,8 @@ img {
 }
 
 .about-text {
-    padding-left: -10px;
-    font-size: 35px;
+    padding-left: -0.625rem;
+    font-size: 2.188rem;
     line-height: normal;
     animation-name: fadeIn;
     animation-duration: 1s;
@@ -115,34 +115,34 @@ img {
 }
 
 .about-card {
-    height: 150px;
+    height: 9.375rem;
     position: absolute;
     background-image: linear-gradient(to left, #02d866, black);
     display: flex;
     background-color: #02d866;
-    border-radius: 10px;
-    font-size: 20px;
+    border-radius: 0.625rem;
+    font-size: 1.25rem;
     animation-name: slideInRight;
     animation-duration: 2s;
     animation-delay: 0.5s;
-    margin-left: -10px;
+    margin-left: -0.625rem;
 }
 
 .about-card .card-body {
-    width: 600px;
+    width: 37.5rem;
 }
 
 .about-card .card-title {
-    margin-top: -40px;
-    margin-left: 15px;
-    padding-left: 10px;
+    margin-top: -2.5rem;
+    margin-left: .938rem;
+    padding-left: .625rem;
     padding-bottom: 0;
     line-height: 1;
     font-size: 20px;
 }
 
 .about-card .card-text {
-    padding-left: 10px;
+    padding-left: .625rem;
     display: flex;
     flex-direction: column;
 }
@@ -153,29 +153,29 @@ img {
   
   .partition-left {
     width: 75%;
-    padding: 20px;
+    padding: 1.25rem;
   }
   
   .partition-right {
     width: 50%;
     padding: 0;
-    margin: -200px 0 10px;
-    max-width: 700px;
+    margin: -12.5rem 0 .625rem;
+    max-width: 50%;
   }
 
 .card-container {
     animation-name: slideInLeft;
     animation-duration: 2s;
     animation-delay: 0s;
-    margin-left: -5px;
-    margin-top: 200px;
+    margin-left: -.313rem;
+    margin-top: 12.5rem;
 }
   
 .card-row {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   gap: 10px; 
-   margin: -350px 0 0 30px;
+   gap: .625rem; 
+   margin: -21.875rem 0 0 1.875rem;
    padding-top: 20px;
 }
 
@@ -187,22 +187,22 @@ img {
     }
 
     .heading1 {
-        padding-left: 20px;
+        padding-left: 1.25rem;
         animation-name: slideInLeft;
         animation-duration: 1s;
         animation-delay: 0s;
-        margin-top: 100px;
+        margin-top: 6.25rem;
     }
 
     .about-text {
-        padding-left: -10px;
-        margin-left: 15px;
-        font-size: 35px;
+        padding-left: -.625rem;
+        margin-left: .938rem;
+        font-size: 2.188rem;
         line-height: normal;
         animation-name: fadeIn;
         animation-duration: 1s;
         animation-delay: 0s;
-        font-size: 25px;
+        font-size: 1.563rem;
     }
 
     .partition-container {
@@ -211,50 +211,50 @@ img {
 
     .partition-left{
         width: 100%;
-        padding: 10px;
+        padding: 0.625rem;
         margin: 0;
         max-width: none;
     }
 
     .partition-right {
         width: 100%;
-        padding: 10px;
-        margin-top: -45px;
+        padding: 0.625rem;
+        margin-top: -2.813rem;
         max-width: none;
     }
 
     .card-container {
-        margin-top: 500px;   
+        margin-top: 31.25rem;   
     }
 
     .about-card {
-        height: 150px;
-        width: 325px;
+        height: 9.375rem;
+        width: 20.313rem;
     }
 
     .about-card .card-title {
         font-size: 0.8em;
         font-weight: bold;
         line-height: 20px;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     .about-card .card-text {
         font-size: 0.8em;
-        margin-top: 50px;
+        margin-top: 3.125rem;
         margin-bottom: -25px;
         line-height: 0.1em;
     }
 
     .heading {
-        margin-top: 30px;
-        padding-top: 10px;
+        margin-top: 1.875rem;
+        padding-top: 0.625rem;
         display: flex;
         img {
-            height: 50px;
-            width: 50px;
-            margin-right: 10px;
-            margin-top: 10px;
+            height: 3.125rem;
+            width: 3.125rem;
+            margin-right: 0.625rem;
+            margin-top: 0.625rem;
         }
     }
 }
@@ -267,9 +267,8 @@ img {
     }
 
     .about-text {
-        padding-left: -10px;
-        margin-left: 15px;
-        font-size: 35px;
+        padding-left: -0.625rem;
+        margin-left: 0.938rem;
         line-height: normal;
         animation-name: fadeIn;
         animation-duration: 1s;
@@ -277,9 +276,9 @@ img {
         font-size: 25px;
     }
     .about-card {
-        height: 150px;
-        width: 750px;
-        margin-top: 20px;
+        height: 9.375rem;
+        width: 46.875rem;
+        margin-top: 1.25rem;
     }
 
     .partition-container {
@@ -288,20 +287,20 @@ img {
 
     .partition-left {
         width: 100%;
-        padding: 10px;
+        padding: 0.625rem;
 
         max-width: none;
     }
 
     .partition-right {
         width: 100%;
-        padding: 10px;
-        margin-top: 20px;
-        margin-bottom: 50px;
+        padding: 0.625rem;
+        margin-top: 1.25rem;
+        margin-bottom: 3.125rem;
         max-width: none;
     }
 
     .card-container {
-        margin-top: 500px;
+        margin-top: 31.25rem;
     }
 }
