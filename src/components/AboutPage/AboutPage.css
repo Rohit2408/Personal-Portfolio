@@ -223,6 +223,11 @@ img {
         align-items: center;
     }
 
+    TextSphere {
+        align-items: center;
+        justify-content: center;
+    }
+
     .card-container {
         margin-top: 31.25rem;   
     }
@@ -230,7 +235,7 @@ img {
     .about-card {
         position: absolute;
         height: 9.375rem;
-        width: 20.313rem;
+        width: 90%;
     }
 
     .about-card .card-title {
