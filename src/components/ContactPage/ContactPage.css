@@ -119,8 +119,8 @@
   .close-btn {
     font-size: 0.875rem;
     padding: 0.063rem 1.25rem;
-    top: 2.5%;
-    right: 2.5%;
+    top: 2.5vh;
+    right: 2.5vw;
   }
 
   .contact-button button {
