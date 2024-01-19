@@ -42,19 +42,3 @@
     height: 18.75rem;
   }
 }
-
-@media screen and (max-width: 1024px) {
-  .cards {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .cards .MuiCard-root {
-    width: 100%;
-  }
-
-  .cards .MuiCardMedia-root {
-    width: 100%;
-    height: 18.75rem;
-  }
-}

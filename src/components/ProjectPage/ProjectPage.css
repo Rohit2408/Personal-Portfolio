@@ -20,7 +20,9 @@
         z-index: 9999;
     }    
 
-    h1 {
+    .heading h1 {
+        padding-left: 45vw;
+        white-space: nowrap;
         font-size: 40px;
         margin-top: 6.25rem;
     }

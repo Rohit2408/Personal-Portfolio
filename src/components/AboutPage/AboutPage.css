@@ -12,7 +12,7 @@ u {
       transform: translateX(0);
       opacity: 1;
     }
-  }
+}
 
 @keyframes slideInRight {
     0% {
@@ -55,50 +55,50 @@ u {
 }
 
 .story {
-    padding-bottom: 3.125rem;
+    padding-bottom: 50px;
 }
 
 img {
-    margin-left: 3.75rem;
-    margin-top: 1.25rem;
+    margin-left: 60px;
+    margin-top: 20px;
 }
 
 .about {
     background-color: black;
-    line-height: 1.25rem;
+    line-height: 20px;
 }
 
 .about-content {
     display: flex;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem; 
+    padding-left: 30px;
+    padding-right: 30px; 
 }
 
 .heading {
     color: white;
     display: flex;
     align-items: center;
-    margin-bottom: -1.875rem;
-    padding-left: 0.625rem;
+    margin-bottom: -30px;
+    padding-left: 10px;
 
     img {
-        margin-top: -1.25rem;
+        margin-top: -20px;
     }
 }
 
 .body {
-    padding-left: 0.625rem;
+    padding-left: 10px;
 }
 
 .heading1 {
-    padding-left: 2.188rem;
+    padding-left: 35px;
     animation-name: slideInLeft;
     animation-duration: 1s;
     animation-delay: 0s;
 }
 
 .heading2 {
-    padding-left: 2.188rem;
+    padding-left: 35px;
     color: #02d866;
     animation-name: slideInLeft;
     animation-duration: 1s;
@@ -106,55 +106,52 @@ img {
 }
 
 .about-text {
-    padding-left: 0.938rem;
-    font-size: 2.188rem;
+    padding-left: 15px;
+    font-size: 35px;
     line-height: normal;
     animation-name: fadeIn;
     animation-duration: 1s;
     animation-delay: 0s;
 }
 
-.skills {
-    margin-left: 0.938rem;
-    margin-top: -15%;
-    position: absolute;
-}
-
 .about-card {
-    height: 9.375rem;
+    height: 150px;
     background-image: linear-gradient(to left, #02d866, black);
     background-color: #02d866;
-    border-radius: 0.625rem;
-    font-size: 1.25rem;
+    border-radius: 10px;
+    font-size: 20px;
     animation-name: slideInRight;
     animation-duration: 2s;
     animation-delay: 0.5s;
-    margin-left: -1.25rem
+    margin-left: -20px
 }
 
 .about-card .card-body {
-    width: 37.5rem;
+    width: 600px;
 }
 
 .about-card .card-title {
-    margin-top: 0.625rem;
-    margin-left: .938rem;
-    margin-bottom: 0.625rem;
-    padding-left: .625rem;
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding-left: 10px;
     padding-bottom: 0;
     line-height: 1;
     font-size: 20px;
 }
 
 .about-card .card-text {
-    padding-left: 25px;
-    margin-top: 2.5rem;
+    padding-left: 10px;
+    margin-top: 30px;
     line-height: 0%;
 }
 
 .heading {
-    margin-top: 0.313rem;
-    margin-right: 0.313rem;
+    margin-top: 5px;
+    margin-right: 5px;
+    img {
+        margin-top: 10px;
+    }
 }
 
 .partition-container {
@@ -163,7 +160,7 @@ img {
     height: 50%;
     width: 100%;
     bottom: 10%;
-    min-height: 37.5rem;
+    min-height: 600px;
   }
   
   .partition-left {
@@ -171,13 +168,13 @@ img {
     flex-direction: row;
     height: 50%;
     width: 75%;
-    padding: 1.25rem;
+    padding: 20px;
   }
   
   .partition-right {
     width: 50%;
     padding: 0;
-    margin: -12.5rem 0 .625rem;
+    margin: -200px 0 10px;
     max-width: 50%;
   }
 
@@ -185,15 +182,15 @@ img {
     animation-name: slideInLeft;
     animation-duration: 2s;
     animation-delay: 0s;
-    margin-left: -.313rem;
-    margin-top: 12.5rem;
+    margin-left: -5px;
+    margin-top: -200px;
 }
   
 .card-row {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   gap: .625rem; 
-   margin: -21.875rem 0 0 1.875rem;
+   display: block;
+   width: 40%;
+   gap: 10px; 
+   margin: -350px 0 0 30px;
    padding-top: 20px;
 }
 
@@ -204,105 +201,28 @@ img {
         animation-duration: 2s;
     }
 
+    .story {
+        height: 100%;
+        width: 100%;
+    }
+
     .heading1 {
-        padding-left: 1.25rem;
+        padding-left: 20px;
         animation-name: slideInLeft;
         animation-duration: 1s;
         animation-delay: 0s;
-        margin-top: 6.25rem;
-    }
-
-    .about-text {
-        padding-left: -.625rem;
-        margin-left: .938rem;
-        font-size: 2.188rem;
-        line-height: normal;
-        animation-name: fadeIn;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        font-size: 1.563rem;
-    }
-
-    .partition-container {
-        flex-direction: column;
-        min-height: 31.25rem;
-        position: relative;
-    }
-
-    .partition-left{
-        width: 100%;
-        max-width: none;
-    }
-
-    .partition-right {
-        display: flex;
-        width: 100%;
-        padding: 0.625rem;
-        margin-top: -2.813rem;
-        justify-content: center;
-        align-items: center;
-        margin-left: 7.5rem;
-    }
-
-    .card-container {
-        margin-top: 31.25rem;   
-    }
-
-    .about-card {
-        position: absolute;
-        height: 9.375rem;
-        width: 90vw;
-    }
-
-    .about-card .card-title {
-        font-size: 0.8em;
-        font-weight: bold;
-        line-height: 20px;
-        margin-top: 1.25rem;
-    }
-
-    .about-card .card-text {
-        font-size: 0.8em;
-        margin-top: 3.125rem;
-        margin-bottom: -1.563rem;
-        line-height: 0.1em;
-    }
-
-    .heading {
-        margin-top: 1.875rem;
-        padding-top: 0.625rem;
-        display: flex;
-        img {
-            height: 3.125rem;
-            width: 3.125rem;
-            margin-right: 0.625rem;
-            margin-top: 0.625rem;
-        }
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    body {
-        overflow: auto;
-    }
-
-    .heading1 {
-        margin-left: 0.938rem;
+        margin-top: 100px;
     }
 
     .heading2 {
-        margin-left: 0.938rem;
-    }
-
-    .about {
-        animation-name: slideInUp;
-        animation-delay: 0s;
-        animation-duration: 2s;
+        margin-top: 5px;
+        margin-left: -15px;
     }
 
     .about-text {
-        padding-left: -0.625rem;
-        margin-left: 1.875rem;
+        padding-left: -10px;
+        margin-left: -10px;
+        font-size: 35px;
         line-height: normal;
         animation-name: fadeIn;
         animation-duration: 1s;
@@ -310,57 +230,64 @@ img {
         font-size: 25px;
     }
 
-    .about-card {
-        position: absolute;
-        height: 9.375rem;
-        width: 95vw;
-        bottom: 10%;
-    }
-
     .partition-container {
         flex-direction: column;
-        min-height: 37.5rem;
+        min-height: 500px;
         position: relative;
     }
 
     .partition-left {
         width: 100%;
-        padding: 0.625rem;
-
         max-width: none;
     }
 
     .partition-right {
+        display: flex;
         width: 100%;
-        padding: 0.625rem;
-        margin-top: 1.25rem;
-        margin-bottom: 3.125rem;
-        max-width: none;
+        padding: 10px;
+        margin-top: -45px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 120px;
     }
 
     .card-container {
-        margin-top: 36rem;
+        margin-top: 300px;  
+    }
+
+    .about-card {
+        position: absolute;
+        height: 130px;
+        width: 90vw;
     }
 
     .about-card .card-title {
-        margin-top: -0.625rem;
-        margin-bottom: 0.625rem;
-        margin-right: 12.5rem;
-    }
-
-    .about-card .card-text {
-        margin-top: 1.875rem;
-        padding-left: 1.563rem;
-        line-height: 0.313rem;
-    }
-
-    .about-card .card-body {
-        width: 100%;
+        font-size: 0.8em;
+        font-weight: bold;
+        line-height: 20px;
+        margin-top: -10px;
+        margin-left: -20px;
+        white-space: normal;
+        word-wrap: break-word;
+        max-width: 250px;
+        text-align: left;
     }
 
     .heading {
-        img{
-            margin-top: 0.313rem;
+        width: 55%;
+        margin-top: 30px;
+        padding-top: 10px;
+        img {
+            margin-top: -20px;
+            margin-right: -10px;
+            height: 50px;
         }
+    }
+
+    .about-card .card-text {
+        font-size: 0.8em;
+        margin-top: -20px;
+        margin-left: -15px;
+        line-height: 20px;
     }
 }
