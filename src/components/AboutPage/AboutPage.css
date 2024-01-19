@@ -195,6 +195,10 @@ img {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        width: 100vw;
+    }
+
     .about {
         animation-name: slideInUp;
         animation-delay: 0s;
@@ -293,6 +297,5 @@ img {
         margin-top: -20px;
         margin-left: -15px;
         line-height: 20px;
-        width: 90vw;
     }
 }
