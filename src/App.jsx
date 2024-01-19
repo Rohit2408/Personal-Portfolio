@@ -49,7 +49,7 @@ function App() {
       ) : (
         <div>
           <Navbar />
-          <Routes>
+          <Routes basename="/Personal-Portfolio">
             <Route path='/' element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='project' element={<Project />} />
