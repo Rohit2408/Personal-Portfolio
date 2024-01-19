@@ -274,14 +274,18 @@ img {
     }
 
     .heading {
-        width: 55%;
+        width: 95%;
         margin-top: 30px;
         padding-top: 10px;
         img {
-            margin-top: -20px;
-            margin-right: -10px;
+            margin-top: -30px;
+            margin-right: 10px;
             height: 50px;
         }
+    }
+
+    .about-card .card-body {
+        width: 100vw;
     }
 
     .about-card .card-text {
@@ -289,5 +293,6 @@ img {
         margin-top: -20px;
         margin-left: -15px;
         line-height: 20px;
+        width: 100vw;
     }
 }
