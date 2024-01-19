@@ -198,7 +198,7 @@ h1, h4, p, a {
 
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (max-width: 1024px) {
 
     .heading {
         margin-left: -1.875rem;
