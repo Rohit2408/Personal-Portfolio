@@ -1,5 +1,8 @@
 * {
   cursor: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .loader-container {
@@ -16,16 +19,53 @@
   border-color: #02d688;
   border-width: 4px;
   border-radius: 50%;
+  animation: spin 2s linear infinite;
 }
 
 @media screen and (max-width: 1024px) {
   CustomCursor {
     display: none;
   }
+
+  .loader-container {
+    height: 100vh;
+  }
+
+  .loader {
+    width: 100px;
+    height: 100px;
+  }
 }
 
-@media screen and (max-width: 480px) {
-  CustomCursor {
-    display: none;
-  }
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .loader-container {
+        height: 100vh;
+    }
+
+    .loader {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) and (max-width:767px) {
+    .loader-container {
+        height: 100vh;
+    }
+
+    .loader {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .loader-container {
+        height: 100vh;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
 }
