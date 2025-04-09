@@ -16,10 +16,16 @@ function CustomCursor() {
 
       const hoveredElement = document.elementFromPoint(posX, posY);
 
-      if (hoveredElement.classList.contains('contact-btn') || hoveredElement.classList.contains('close-btn') || hoveredElement.classList.contains('heading')) {
-        cursorOutline.style.backgroundColor = 'white';
-      } else {
-        cursorOutline.style.backgroundColor = '#02d866';
+      if (hoveredElement && hoveredElement.classList) {
+        if (
+          hoveredElement.classList.contains('contact-btn') ||
+          hoveredElement.classList.contains('close-btn') ||
+          hoveredElement.classList.contains('heading')
+        ) {
+          cursorOutline.style.backgroundColor = 'white';
+        } else {
+          cursorOutline.style.backgroundColor = '#02d866';
+        }
       }
 
       cursorOutline.animate(

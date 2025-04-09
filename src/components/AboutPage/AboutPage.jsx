@@ -20,15 +20,15 @@ function AboutPage() {
       <div className='skills'>
         <div className='card-container'>
           <div className='card-row'>
-            <Card className='about-card' > 
+            <Card className='about-card' >
               <CardBody>
                 <div className='heading'>
                   <CardTitle>Bachelor of Computer Science and Engineering</CardTitle>
                   <img width="70" height="70" src="https://img.icons8.com/pastel-glyph/64/000000/graduation-cap--v3.png" alt="graduation-cap--v3" style={{marginLeft:'100px'}}/>
-                </div> 
+                </div>
                 <div className='body'>
                   <CardText>Web Developer & Designer</CardText>
-                  <CardText>August 2021</CardText>
+                  <CardText>August 2020</CardText>
                 </div>
               </CardBody>
             </Card>

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .signup-container {
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
+  .logo {
+    color: #00ff9d;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  .signup-card {
+    background-color: #00ff9d;
+    border-radius: 1rem;
+    padding: 3rem;
+    width: 480px;
+    margin-top: 1rem;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .input-group {
+    margin-bottom: 0.5rem;
+  }
+
+  .form-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    padding-bottom: 0.5rem;
+    color: black;
+  }
+
+  .form-input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-bottom-color: black;
+  }
+
+  .submit-button {
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+  }
+
+  .submit-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .social-section {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .social-text {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-button {
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    transition: color 0.2s;
+  }
+
+  .social-button:hover {
+    color: white;
+  }
+
+  .signin-section {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .signin-text {
+    color: black;
+  }
+
+  .signin-link {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 0.25rem;
+  }
+
+  .signin-link:hover {
+    text-decoration: underline;
+  }
