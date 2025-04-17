@@ -39,20 +39,24 @@ const SignUpPage = () => {
         throw new Error("Authentication failed")
       }
 
-      const { data: existingUserData , error: existingUserError } = await supabase.from("profiles").select("email").eq("email", email);
-
-      if (existingUserError) {
-        throw existingUserError;
-      }
-
-      if (existingUserData.length > 0) {
-        toast.error("Email already exists. Please try again.");
-        return;
+      if(provider=="google") {
+        const { data: existingUserData , error: existingUserError } = await supabase.from("profiles").select("email").eq("email", email);
+        if(existingUserError) {
+            throw existingUserError
+        }
+        if(existingUserData?.length > 0) {
+            toast.error("Email already exists. Please log in.")
+            navigate('/login')
+            return
+        }
+        navigate('/login')
+        toast.success('Signup Successful! Please login.')
       }
 
     } catch (error) {
-      console.error(`${provider} login error:`, error.message)
-      toast.error(`${provider} login failed. Please try again.`)
+        console.error(`${provider} login error:`, error.message)
+        toast.error(error.message || `${provider} login failed. Please try again!`)
+        navigate('/login')
     }
   }
 
