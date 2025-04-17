@@ -1,10 +1,56 @@
 import { useState } from "react"
-import { Github, Linkedin } from "lucide-react"
 import { FaGoogle } from "react-icons/fa"
 import { useNavigate } from "react-router-dom"
 import { supabase } from "../../lib/supabase"
 import toast from "react-hot-toast"
 import "./SignUpPage.css"
+
+// Export this function at the top level of the file, before the component
+export const handleGoogleAuthCallback = async (session) => {
+  try {
+    if (!session || !session.user) {
+      throw new Error("No user data found")
+    }
+
+    const user = session.user
+
+    // Check if user with this email already exists in profiles
+    const { data: existingUserData, error: existingUserError } = await supabase
+      .from("profiles")
+      .select("email")
+      .eq("email", user.email)
+      .single()
+
+    if (existingUserError && existingUserError.code !== "PGRST116") {
+      // PGRST116 means no rows returned, which is what we want
+      throw existingUserError
+    }
+
+    if (existingUserData) {
+      // User already exists
+      toast.error("Email already exists. Please log in.")
+      return { success: false, message: "Email already exists" }
+    }
+
+    // Create new profile for the user
+    const { error: profileError } = await supabase.from("profiles").insert({
+      id: user.id,
+      email: user.email,
+      full_name: user.user_metadata?.full_name || "",
+    })
+
+    if (profileError) {
+      throw profileError
+    }
+
+    toast.success("Signup Successful! Please login.")
+    return { success: true, message: "Signup successful" }
+  } catch (error) {
+    console.error("Google auth callback error:", error.message)
+    toast.error(error.message || "Authentication failed. Please try again.")
+    return { success: false, message: error.message }
+  }
+}
 
 const SignUpPage = () => {
   const navigate = useNavigate()
@@ -20,13 +66,15 @@ const SignUpPage = () => {
 
   const handleSocialLogin = async (provider) => {
     try {
+      setLoading(true)
+
       const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-          redirectTo: `${window.location.origin}Personal-Portfolio/auth/callback`,
+          redirectTo: `${window.location.origin}/Personal-Portfolio/auth/callback`,
           queryParams: {
-            access_type: 'offline',
-            prompt: 'consent',
+            access_type: "offline",
+            prompt: "consent",
           },
         },
       })
@@ -39,24 +87,15 @@ const SignUpPage = () => {
         throw new Error("Authentication failed")
       }
 
-      if(provider=="google") {
-        const { data: existingUserData , error: existingUserError } = await supabase.from("profiles").select("email").eq("email", email);
-        if(existingUserError) {
-            throw existingUserError
-        }
-        if(existingUserData?.length > 0) {
-            toast.error("Email already exists. Please log in.")
-            navigate('/login')
-            return
-        }
-        navigate('/login')
-        toast.success('Signup Successful! Please login.')
-      }
+      // For Google sign-up, we need to check if the user already exists
+      // This will be handled in the auth callback component since we need to wait for the OAuth redirect
 
+      // The actual email check and profile creation will happen in the AuthCallback component
+      // We're just initiating the OAuth flow here
     } catch (error) {
-        console.error(`${provider} login error:`, error.message)
-        toast.error(error.message || `${provider} login failed. Please try again!`)
-        navigate('/login')
+      console.error(`${provider} login error:`, error.message)
+      toast.error(error.message || `${provider} login failed. Please try again!`)
+      setLoading(false)
     }
   }
 
@@ -88,13 +127,11 @@ const SignUpPage = () => {
 
       if (user) {
         // Create profile
-        const { error: profileError } = await supabase
-          .from("profiles")
-          .insert({
-            id: user.id,
-            email: user.email,
-            full_name: name,
-          })
+        const { error: profileError } = await supabase.from("profiles").insert({
+          id: user.id,
+          email: user.email,
+          full_name: name,
+        })
 
         if (profileError) {
           console.error("Profile creation error:", profileError.message)
@@ -109,7 +146,6 @@ const SignUpPage = () => {
       } else {
         // Email confirmation is enabled
         toast.success("Signup successful! Please check your email to confirm.")
-        navigate("/login")
       }
     } catch (error) {
       console.error("Signup error:", error.message)
@@ -172,11 +208,7 @@ const SignUpPage = () => {
             <div className="social-section">
               <p className="social-text">Or sign up using</p>
               <div className="social-buttons">
-                <button
-                  type="button"
-                  className="social-button"
-                  onClick={() => handleSocialLogin('google')}
-                >
+                <button type="button" className="social-button" onClick={() => handleSocialLogin("google")}>
                   <FaGoogle size={24} />
                 </button>
               </div>
