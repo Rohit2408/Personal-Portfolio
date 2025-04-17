@@ -34,15 +34,26 @@ const AuthCallback = () => {
 
           if (result.success) {
             // Successful sign up
-            navigate("/login")
+            onLogin(true)
+            toast.success("Sign up successful!")
+            navigate("/dashboard")
           } else {
             // Failed sign up (likely email already exists)
+            toast.error("Sign up failed. Email already exists.")
             navigate("/login")
           }
         } else {
           // This is an existing user signing in
-          toast.success("Login successful!")
-          navigate("/dashboard")
+            const { error: updateUserError } = await supabase
+            .from("profiles")
+            .update({ last_sign_in_at: new Date().toISOString() })
+            .eq("id", session.user.id);
+
+            if (updateUserError) {
+                console.error("Error updating last_sign_in_at:", updateUserError);
+            }
+            toast.error("Email already exists. Please sign in!");
+            navigate("/login");
         }
       } catch (error) {
         console.error("Auth callback error:", error.message)

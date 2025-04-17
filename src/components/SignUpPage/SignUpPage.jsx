@@ -142,7 +142,7 @@ const SignUpPage = () => {
       if (session) {
         // User is logged in (email confirmation disabled)
         toast.success("Signup successful! You are now logged in.")
-        navigate("/dashboard")
+        navigate("/login")
       } else {
         // Email confirmation is enabled
         toast.success("Signup successful! Please check your email to confirm.")
